@@ -1,12 +1,12 @@
-# 🎬 Movie Recommender System
+<img width="882" height="403" alt="screenshot2" src="https://github.com/user-attachments/assets/7b898fdb-0fb1-4282-9586-312020d307a0" /># 🎬 Movie Recommender System
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white)](https://jupyter.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 
-A **content-based movie recommendation engine** built from scratch using NLP and cosine similarity. Input any movie title and the system returns the 5 most similar films — powered by a 4,800+ movie dataset from TMDB.
+A **content-based movie recommendation engine** built from scratch using NLP and cosine similarity — with a fully deployed **Streamlit web application**. Input any movie title and the system returns the 5 most similar films with posters — powered by a 4,800+ movie dataset from TMDB.
 
 ---
 
@@ -14,6 +14,7 @@ A **content-based movie recommendation engine** built from scratch using NLP and
 
 - [Overview](#-overview)
 - [Demo](#-demo)
+- [Web Application](#-web-application)
 - [How It Works](#-how-it-works)
 - [Dataset](#-dataset)
 - [Tech Stack](#-tech-stack)
@@ -35,6 +36,7 @@ This project implements a **Content-Based Filtering** recommender system that su
 - Vectorizes text using `CountVectorizer` (5,000 features, English stop words removed)
 - Computes a **4,806 × 4,806 cosine similarity matrix** for instant lookup
 - Serializes the model artifacts with `pickle` for deployment-ready use
+- Deployed as an interactive **Streamlit web app** with movie poster fetching via TMDB API
 
 ---
 
@@ -49,24 +51,40 @@ recommend('Batman')
 # Batman Returns
 # Batman Forever
 ```
+Demo 1:
+---
+<img width="882" height="411" alt="screenshot1" src="https://github.com/user-attachments/assets/50314dfd-85d8-4b5e-a098-2ec4778d674e" />
+
 Demo 2:
 ---
-
-<img width="882" height="411" alt="screenshot1" src="https://github.com/user-attachments/assets/5d874bd0-27dd-47b2-bbe2-a27173e701e7" />
-
-Demo 2:
----
-
-<img width="882" height="403" alt="screenshot2" src="https://github.com/user-attachments/assets/d3ff09e3-f3c5-4aee-a94b-6b224db2ba2b" />
+<img width="882" height="403" alt="screenshot2" src="https://github.com/user-attachments/assets/a598727a-e3f0-4b6e-b2d1-d1b60f547c40" />
 
 Demo 3:
 ---
-
-<img width="880" height="407" alt="screenshot3" src="https://github.com/user-attachments/assets/33d18423-656f-4a99-b806-31b3ecadb964" />
+<img width="880" height="407" alt="screenshot3" src="https://github.com/user-attachments/assets/e3d9f8ae-c9c0-4b12-b664-fc4b0dbae7d1" />
 
 ---
 
-## ⚙️ How It Works
+## 🌐 Web Application
+
+The project includes a fully functional **Streamlit web app** that brings the recommender to life with a clean UI and real movie posters.
+
+**Features:**
+- Searchable dropdown to select any movie from the dataset
+- One-click **"Show Recommendation"** button
+- Displays **5 recommended movies** with their posters fetched live from the TMDB API
+- Dark-themed, responsive layout
+
+**Screenshot:**
+
+![App Screenshot](screenshot1.png)
+
+### Run the App Locally
+
+```bash
+pip install streamlit requests
+streamlit run app.py
+```
 
 ```
 Raw Data (movies.csv + credits.csv)
@@ -136,6 +154,8 @@ After merging and cleaning: **4,806 movies** retained.
 | `scikit-learn` | `CountVectorizer`, `cosine_similarity` |
 | `matplotlib` / `seaborn` | EDA visualizations |
 | `pickle` | Model serialization for deployment |
+| `streamlit` | Interactive web application frontend |
+| `requests` | Fetching movie posters via TMDB API |
 
 ---
 
@@ -145,10 +165,12 @@ After merging and cleaning: **4,806 movies** retained.
 movie-recommender-system/
 │
 ├── Movie-Recommender-System.ipynb   # Main notebook (EDA + modeling)
+├── app.py                           # Streamlit web application
 ├── movies.csv                       # Raw movies dataset
 ├── credits.csv                      # Raw credits dataset
 ├── movies.pkl                       # Serialized movie dataframe
 ├── similarity.pkl                   # Serialized cosine similarity matrix
+├── screenshot1.png                  # App screenshot
 └── README.md
 ```
 
@@ -159,7 +181,7 @@ movie-recommender-system/
 ### Prerequisites
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter streamlit requests
 ```
 
 ### Run the Notebook
@@ -205,7 +227,7 @@ The model produces semantically meaningful recommendations by identifying movies
 
 - [ ] **TF-IDF Vectorization** — to downweight overly common terms
 - [ ] **Hybrid filtering** — combine content-based with collaborative filtering using user ratings
-- [ ] **Streamlit Web App** — interactive UI with movie posters via TMDB API
+- [x] **Streamlit Web App** — interactive UI with movie posters via TMDB API ✅
 - [ ] **Word embeddings** — use Word2Vec or sentence transformers for richer semantic similarity
 - [ ] **Evaluation metrics** — implement precision@k and recall@k with user feedback
 
@@ -217,10 +239,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-> Built with ❤️ using Python and scikit-learn | Dataset courtesy of [TMDB](https://www.themoviedb.org/) via Kaggle
+> Built with ❤️ using Python, scikit-learn & Streamlit | Dataset courtesy of [TMDB](https://www.themoviedb.org/) via Kaggle
