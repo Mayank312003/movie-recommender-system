@@ -49,15 +49,19 @@ recommend('Batman')
 # Batman Returns
 # Batman Forever
 ```
-Demo 1: 
+Demo 2:
+---
+
 <img width="882" height="411" alt="screenshot1" src="https://github.com/user-attachments/assets/5d874bd0-27dd-47b2-bbe2-a27173e701e7" />
 
----
 Demo 2:
+---
+
 <img width="882" height="403" alt="screenshot2" src="https://github.com/user-attachments/assets/d3ff09e3-f3c5-4aee-a94b-6b224db2ba2b" />
 
----
 Demo 3:
+---
+
 <img width="880" height="407" alt="screenshot3" src="https://github.com/user-attachments/assets/33d18423-656f-4a99-b806-31b3ecadb964" />
 
 ---
