@@ -229,7 +229,7 @@ The model produces semantically meaningful recommendations by identifying movies
 - [ ] **Hybrid filtering** — combine content-based with collaborative filtering using user ratings
 - [x] **Streamlit Web App** — interactive UI with movie posters via TMDB API ✅
 - [ ] **Word embeddings** — use Word2Vec or sentence transformers for richer semantic similarity
-- [ ] **Evaluation metrics** — implement precision@k and recall@k with user feedback
+-
 
 ---
 
@@ -239,7 +239,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
+## Author
 
----
+**Mayank Yadav**
+
+**Aspiring Data Scientist | Machine Learning Engineer**
 
 > Built with ❤️ using Python, scikit-learn & Streamlit | Dataset courtesy of [TMDB](https://www.themoviedb.org/) via Kaggle
