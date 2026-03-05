@@ -1,4 +1,4 @@
-<img width="882" height="403" alt="screenshot2" src="https://github.com/user-attachments/assets/7b898fdb-0fb1-4282-9586-312020d307a0" /># 🎬 Movie Recommender System
+# 🎬 Movie Recommender System
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
