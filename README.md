@@ -225,7 +225,6 @@ The model produces semantically meaningful recommendations by identifying movies
 - [ ] **Hybrid filtering** — combine content-based with collaborative filtering using user ratings
 - [x] **Streamlit Web App** — interactive UI with movie posters via TMDB API ✅
 - [ ] **Word embeddings** — use Word2Vec or sentence transformers for richer semantic similarity
--
 
 ---
 
