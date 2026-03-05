@@ -75,10 +75,6 @@ The project includes a fully functional **Streamlit web app** that brings the re
 - Displays **5 recommended movies** with their posters fetched live from the TMDB API
 - Dark-themed, responsive layout
 
-**Screenshot:**
-
-![App Screenshot](screenshot1.png)
-
 ### Run the App Locally
 
 ```bash
@@ -239,7 +235,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Mayank Yadav**
 
